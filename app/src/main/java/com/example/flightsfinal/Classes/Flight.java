@@ -4,6 +4,9 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Defines this class as a Room Database table
 @Entity(tableName = "flights")
 public class Flight {
@@ -31,6 +34,13 @@ public class Flight {
 
     // Trip plan text returned by the AI
     private String aiPlan;
+
+    // --- NOT STORED IN THE FLIGHTS TABLE ---
+
+    // The expenses of this flight. @Ignore: Room does not save it in the flights table;
+    // FlightRepository loads it from the expenses table.
+    @Ignore
+    private List<Expense> expenses = new ArrayList<>();
 
     // --- CONSTRUCTORS ---
 
@@ -82,4 +92,7 @@ public class Flight {
 
     public String getAiPlan() { return aiPlan; }
     public void setAiPlan(String aiPlan) { this.aiPlan = aiPlan; }
+
+    public List<Expense> getExpenses() { return expenses; }
+    public void setExpenses(List<Expense> expenses) { this.expenses = expenses; }
 }

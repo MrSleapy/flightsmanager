@@ -6,18 +6,21 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.flightsfinal.Classes.Expense;
 import com.example.flightsfinal.Classes.Flight;
+import com.example.flightsfinal.Interfaces.ExpenseDao;
 import com.example.flightsfinal.Interfaces.FlightDao;
 
-// Identifies this class as a Room Database, linking it to Flight
-@Database(entities = {Flight.class}, version = 1)
+// Identifies this class as a Room Database, linking it to Flight and Expense
+@Database(entities = {Flight.class, Expense.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
 
     // Instance variable for the Singleton pattern
     private static AppDatabase instance;
 
-    // Abstract method that Room will implement automatically to provide the DAO
+    // Abstract methods that Room will implement automatically to provide the DAOs
     public abstract FlightDao flightDao();
+    public abstract ExpenseDao expenseDao();
 
     /**
      * Singleton pattern ensures only one instance of the database exists at a time,
