@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".UpcomingFlightsFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="טיסות קרובות"
+        android:textColor="#212121"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- כרטיס עליון: הטיסה הקרובה -->
+    <LinearLayout
+        android:id="@+id/card_next_flight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/sketch_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:minHeight="170dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="הטיסה הקרובה"
+            android:textColor="#757575" />
+
+        <TextView
+            android:id="@+id/tv_next_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#212121"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="פריז, צרפת" />
+
+        <TextView
+            android:id="@+id/tv_next_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#616161"
+            tools:text="15/12/2026 • 08:30" />
+
+        <TextView
+            android:id="@+id/tv_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="#E0E0E0"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:textColor="#212121"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="עוד 12 ימים 05:30:00" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="טיסות נוספות"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_upcoming_flights"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_flight" />
+</LinearLayout>

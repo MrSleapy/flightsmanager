@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    tools:context=".AddEditFlightActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- כותרת + כפתור X לסגירת המסך -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="סגור"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="הוספת / עריכת טיסה"
+                android:textColor="#212121"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="יעד"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/et_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="לדוגמה: פריז, צרפת"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="חברת תעופה"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/et_airline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="לדוגמה: אל על"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="מספר טיסה"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/et_flight_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="לדוגמה: LY321"
+            android:inputType="textCapCharacters"
+            android:minHeight="48dp" />
+
+        <!-- תאריך ושעה -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_pick_date"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="בחר תאריך" />
+
+            <Button
+                android:id="@+id/btn_pick_time"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="בחר שעה" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="מספר ימים"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/et_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="לדוגמה: 7"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="מטרת הטיול"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/et_purpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="לדוגמה: חופשה משפחתית"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="תקציב בש&quot;ח"
+            android:textColor="#616161" />
+
+        <EditText
+            android:id="@+id/et_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="לדוגמה: 8000"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="שמור"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

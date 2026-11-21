@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="currencies">
+        <item>₪ שקל (ILS)</item>
+        <item>$ דולר (USD)</item>
+        <item>€ יורו (EUR)</item>
+        <item>£ פאונד (GBP)</item>
+    </string-array>
+
+    <string-array name="reminder_options">
+        <item>שעה לפני</item>
+        <item>3 שעות לפני</item>
+        <item>יום לפני</item>
+        <item>יומיים לפני</item>
+    </string-array>
+
+    <string-array name="expense_categories">
+        <item>לינה</item>
+        <item>אוכל</item>
+        <item>אטרקציות</item>
+        <item>תחבורה</item>
+        <item>קניות</item>
+        <item>אחר</item>
+    </string-array>
+</resources>

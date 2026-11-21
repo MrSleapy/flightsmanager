@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Flightsfinal" parent="Theme.Material3.Light.NoActionBar">
+        <!-- סקיצה: גווני אפור בלבד -->
+        <item name="colorPrimary">#616161</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#BDBDBD</item>
+        <item name="colorOnPrimaryContainer">#212121</item>
+        <item name="colorSecondaryContainer">#E0E0E0</item>
+        <item name="colorOnSecondaryContainer">#212121</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="Theme.Flightsfinal" parent="Base.Theme.Flightsfinal" />
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SettingsFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="הגדרות"
+        android:textColor="#212121"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- מטבע ברירת מחדל -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sketch_box"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="מטבע ברירת מחדל"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_currency"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/currencies" />
+    </LinearLayout>
+
+    <!-- זמן תזכורת לפני הטיסה -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sketch_box"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="תזכורת לפני הטיסה"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_reminder"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/reminder_options" />
+    </LinearLayout>
+
+    <!-- מצב כהה -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sketch_box"
+        android:padding="12dp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_dark_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="מצב כהה"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
